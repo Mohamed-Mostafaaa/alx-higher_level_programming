@@ -121,7 +121,7 @@ Prototypes for functions written in this project:
     * [linked_lists.c](./linked_lists.c): C functions handling linked lists for testing
     [13-insert_number.c](./13-insert_number.c) (provided by Holberton School).
     * [lists.h](./lists.h): Header file containing definitions and prototypes for
-    all types and functions used in [linked_lists.c](./linked_lists.c) and
+    all types and functions used in [13-linked_lists.c](./13-linked_lists.c) and
     [13-insert_number.c](./13-insert_number.c).
 
 * **14. Smile in the mirror**
