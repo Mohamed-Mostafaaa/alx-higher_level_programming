@@ -2,7 +2,7 @@
 
 def roman_to_int(roman_string):
     if not isinstance(roman_string, str) or
-            roman_string is None:
+        roman_string is None:
         return 0
 
     roman_dict = {
@@ -26,5 +26,5 @@ def roman_to_int(roman_string):
 
         else:
             num += roman_dict[roman_string[i]]
-    return num
 
+    return num
