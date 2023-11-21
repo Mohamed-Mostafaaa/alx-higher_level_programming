@@ -52,20 +52,3 @@ class Square:
     def __ge__(self, other):
         """Define the >= compmarison to a Square."""
         return self.area() >= other.area()
-
-
-s_5 = Square(5)
-s_6 = Square(6)
-print(s_5.__eq__(s_6))
-# if s_5 < s_6:
-#     print("Square 5 < Square 6")
-# if s_5 <= s_6:
-#     print("Square 5 <= Square 6")
-# if s_5 == s_6:
-#     print("Square 5 == Square 6")
-# if s_5 != s_6:
-#     print("Square 5 != Square 6")
-# if s_5 > s_6:
-#     print("Square 5 > Square 6")
-# if s_5 >= s_6:
-#     print("Square 5 >= Square 6")
