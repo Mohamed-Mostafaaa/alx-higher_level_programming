@@ -2,6 +2,8 @@
 
 import math
 
+"""Define a MagicClass matching exactly a bytecode provided by ALX."""
+
 
 class MagicClass:
     """Represent a circle."""
