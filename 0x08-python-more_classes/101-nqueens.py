@@ -93,7 +93,7 @@ def xout(board, row, col):
         c -= 1
 
 
-def recursive_solve(board, row, queens, solutions):
+def recursive_solve(board, row, queens, sol):
     """Recursively solve an N-queens puzzle.
     Args:
         board (list): The current working chessboard.
@@ -104,17 +104,17 @@ def recursive_solve(board, row, queens, solutions):
         solutions
     """
     if queens == len(board):
-        solutions.append(get_solution(board))
-        return solutions
+        sol.append(get_solution(board))
+        return sol
 
     for c in range(len(board)):
         if board[row][c] == " ":
-            tmp_board = board_deepcopy(board)
-            tmp_board[row][c] = "Q"
-            xout(tmp_board, row, c)
-            solutions = recursive_solve(tmp_board, row + 1, queens + 1, solutions)
+            tmp = board_deepcopy(board)
+            tmp[row][c] = "Q"
+            xout(tmp, row, c)
+            sol = recursive_solve(tmp, row + 1, queens + 1, sol)
 
-    return solutions
+    return sol
 
 
 if __name__ == "__main__":
