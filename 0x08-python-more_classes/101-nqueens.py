@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 101-nqueens.py
-# Brennan D Baraban <375@holbertonschool.com>
 """Solves the N-queens puzzle.
 
 Determines all possible solutions to placing N
@@ -26,15 +24,15 @@ def init_board(n):
     """Initialize an `n`x`n` sized chessboard with 0's."""
     board = []
     [board.append([]) for i in range(n)]
-    [row.append(' ') for i in range(n) for row in board]
-    return (board)
+    [row.append(" ") for i in range(n) for row in board]
+    return board
 
 
 def board_deepcopy(board):
     """Return a deepcopy of a chessboard."""
     if isinstance(board, list):
         return list(map(board_deepcopy, board))
-    return (board)
+    return board
 
 
 def get_solution(board):
@@ -45,7 +43,7 @@ def get_solution(board):
             if board[r][c] == "Q":
                 solution.append([r, c])
                 break
-    return (solution)
+    return solution
 
 
 def xout(board, row, col):
@@ -114,17 +112,16 @@ def recursive_solve(board, row, queens, solutions):
     """
     if queens == len(board):
         solutions.append(get_solution(board))
-        return (solutions)
+        return solutions
 
     for c in range(len(board)):
         if board[row][c] == " ":
             tmp_board = board_deepcopy(board)
             tmp_board[row][c] = "Q"
             xout(tmp_board, row, c)
-            solutions = recursive_solve(tmp_board, row + 1,
-                                        queens + 1, solutions)
+            solutions = recursive_solve(tmp_board, row + 1, queens + 1, solutions)
 
-    return (solutions)
+    return solutions
 
 
 if __name__ == "__main__":
