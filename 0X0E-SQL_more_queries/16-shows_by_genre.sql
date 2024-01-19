@@ -1,5 +1,6 @@
 -- Script that lists all shows and all genres
-SELECT tv_shows.title, tv_genres.name -- Query to join tables
+
+SELECT tv_shows.title, tv_genres.name 
 FROM tv_shows
      LEFT JOIN tv_show_genres
      	  ON tv_show_genres.show_id = tv_shows.id
