@@ -14,12 +14,12 @@ def find_peak(list_of_integers):
 """ binary search algorithim """
 
 
-def binary_search(a, lo, hi):
+def binary_search(lis, fir, last):
     """Recursive binary search of the peak"""
-    if lo >= hi:
-        return lo
-    mid = ((hi - lo) // 2) + lo
-    if a[mid] > a[mid + 1]:
-        return binary_search(a, lo, mid)
+    if fir >= last:
+        return fir
+    mid = ((last - fir) // 2) + fir
+    if lis[mid] > lis[mid + 1]:
+        return binary_search(lis, fir, mid)
     else:
-        return binary_search(a, mid + 1, hi)
+        return binary_search(lis, mid + 1, last)
