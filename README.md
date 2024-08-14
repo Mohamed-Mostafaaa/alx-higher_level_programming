@@ -1,5 +1,3 @@
-<!-- @format -->
-
 # Higher-level programming - Python
 
 **High-level programming** and **Python** modules were carried out during **Full Stack Software Engineering studies** at **[Alx School](https://www.alxafrica.com/)**.
